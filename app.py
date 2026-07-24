@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 # Infos de connexion Oracle (utilise la chaîne DSN sans Wallet si mTLS est désactivé)
 DB_USER = "ADMIN"
-DB_PASSWORD = "TonMotDePasseOracle" # Ton MDP de BDD
-DB_DSN = "votre_dsn_oracle" # Trouvable sur Oracle Cloud dans Database Connection
+DB_PASSWORD = "i3c!2G%eO6r%%cD%^A5i" # Ton MDP de BDD
+DB_DSN = """(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.eu-paris-1.oraclecloud.com))(connect_data=(service_name=g84abec1232f805_gs6iyck85acdeswz_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"""
 
 def get_db_connection():
     return oracledb.connect(user=DB_USER, password=DB_PASSWORD, dsn=DB_DSN)
